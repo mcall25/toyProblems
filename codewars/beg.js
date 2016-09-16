@@ -42,3 +42,25 @@ function XO(str) {
 }
 
 str1.charCodeAt(0)
+
+
+// problem 2
+// The numberOfOccurrences function must return the number of occurrences of an element in an array.
+var a1 = [1, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+ function numberOfOccurrences(num) {
+    	var str = '';
+
+    for (var i = 0; i < a1.length; i++) {
+          str = a1[i] + str;
+
+    }
+      var num2 = str.split(num).join('')
+
+      var num3 = str.length - num2.length;
+
+		  return num3;
+
+}
+
+numberOfOccurrences(1);
