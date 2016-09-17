@@ -64,3 +64,24 @@ var a1 = [1, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 }
 
 numberOfOccurrences(1);
+
+
+// 3. Welcome. In this kata, you are asked to square every digit of a number.
+// For example, if we run 9119 through the function, 811181 will come out.
+// Note: The function accepts an integer and returns an integer
+
+function squareDigits(num) {
+  var array = [];
+  var num2 = '';
+ var num3 = '';
+  array.push(num);
+  num2 = num2 + array[0];
+
+  for (var i = 0; i < num2.length; i++) {
+     var t  =  Math.pow(num2.charAt(i), 2);
+     	num3 = num3 + t;
+
+      }
+        return Number(num3);
+
+}

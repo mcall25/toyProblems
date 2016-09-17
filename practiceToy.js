@@ -1,4 +1,4 @@
-Function.prototype.newBind = function() {
+ displ \Function.prototype.newBind = function() {
   var _this = this
   // assign arg to the varible the context
   var context = arguments[0]
