@@ -112,6 +112,7 @@ function toWeirdCase(str) {
 
 
 
+
 // problem replace the first letter of each word if its a noun
 function pigLatinizer(str){
 	return str.split(' ').map(function(word){
@@ -142,3 +143,20 @@ var obj = {
   }
 
 }
+
+// write a function that takes as a parameter an array of numbers represented as strings and outputs an array of numbers.
+
+ie:["1", "2", "3"] to [1, 2, 3]
+
+var a1 = ["1", "2", "3"]
+var str = '1';
+Number(str);
+
+function func(array) {
+	
+  	var a2 = array.map(Number)
+  	return a2
+
+}
+
+func(a1)
