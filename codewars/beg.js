@@ -145,6 +145,7 @@ var obj = {
 }
 
 // write a function that takes as a parameter an array of numbers represented as strings and outputs an array of numbers.
+// qqqq question - how do i get .map to work with a function
 
 ie:["1", "2", "3"] to [1, 2, 3]
 
@@ -153,10 +154,141 @@ var str = '1';
 Number(str);
 
 function func(array) {
-	
+
   	var a2 = array.map(Number)
   	return a2
 
 }
 
 func(a1)
+
+
+// Given an array of integers, remove the smallest value. If
+// there are multiple elements with the same value, remove the one with a lower index.
+//  If you get an empty array/list, return an empty array/list.
+
+
+var a1 = [5, 3, 2, 1, 4];
+
+
+
+function removeSmallest(array) {
+
+		// if (array.length <= 0) {
+		//     return array
+		//   }
+		//  else if (array.length == 1) {
+		//   	return array
+		//   }
+
+    for (var i = 0; i < array.length; i++) {
+          var counter = 0;
+        for (var k = 0; k < array.length; k++) {
+              if (array[i] < array [k]) {
+                  counter = counter + 1;
+              }
+              if (counter === array.length - 1) {
+
+                  array.splice(i, 1)
+                  return array
+              }
+
+        }
+    }
+
+}
+	removeSmallest(a1);
+}
+
+
+function factorial(number) {
+    if (number <= 0 ) {
+      return 1;
+
+    }
+    else {
+      return number * factorial(number - 1)
+    }
+    return number
+};
+
+// remove all occurrences of b from list a
+function array_diff(a, b) {
+	var a2 = []
+  for (var i = 0; i < a.length; i++) {
+
+  		console.log(a.length)
+        if (b[0] != a[i]) {
+    		a2.push(a[i])
+        }
+  }
+  a = a2;
+  return a;
+}
+array_diff(a1, b1)
+
+
+
+function validPhoneNumber(arr) {
+ var a1 =  str.split('');
+  var a2 = [];
+  for (var i = 0; i < a1.length; i++) {
+
+  		if( typeof(a1[i]) == Number ) {
+  			console.log(true);
+  		}
+  }
+    for (var i = 0; i < a1.length; i++) {
+    	a2.push(a1[0]);
+    	a2.push(a1[4]);
+    	a2.push(a1[5]);
+    	a2.push(a1[9]);
+
+	if (a2.indexOf('(') >= 0 && a2.indexOf(')') >= 0 && a2.indexOf(' ') >= 0 && a2.indexOf('-') >= 0) {
+			console.log(a2);
+			return true;
+		}
+	else {
+		console.log(a2);
+		return false
+
+	}
+
+  }
+
+}
+
+validPhoneNumber(str)
+
+
+
+The goal of this exercise is to convert a string to a new string where each character
+in the new string is '(' if that character appears only once in the original string, or ')'
+if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+ var str = "REcede"
+  var mike = str.toLowerCase()
+
+
+  function duplicateEncode(word) {
+ 	var word2 = word.toLowerCase()
+    var a1 = word2.split('');
+    var a2 = [];
+
+
+
+      for (var i = 0; i < a1.length; i++) {
+        	if (a1.indexOf(a1[i]) !== a1.lastIndexOf(a1[i])) {
+        			a2.push(')')
+
+        	} else {
+        		a2.push('(')
+        	}
+
+      }
+
+ 	 	return a2.join('')
+
+
+   }
+     duplicateEncode(str);
